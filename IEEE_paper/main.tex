@@ -1,0 +1,75 @@
+%Estrutura "main" para crear documento con formato IEEE
+
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.\def
+%\def\abstractname{Abstract}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+
+
+\usepackage[utf8]{inputenc}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+    
+    \title{Titulo}
+
+    \author
+    {
+        \IEEEauthorblockN
+        {
+            Nombre1, Nombre2
+        }
+        \IEEEauthorblockA
+        {
+            \textit{Facultad}\\
+            \textit{Universidad}\\
+            ciudad, pais\\
+            correo1\\correo2
+        }
+    }
+
+    \maketitle
+
+    \begin{abstract}
+    resumen
+    \end{abstract}
+
+    \def\abstractname{abstract}
+    \begin{abstract}
+    abstract
+    \end{abstract}
+
+    \begin{IEEEkeywords}
+    palabras clave
+    \end{IEEEkeywords}
+
+    \section{Introduccion}
+
+        Inicio
+
+    \section{desarollo}
+        \subsection{parte1}
+
+            Primera parte \cite{b1}
+
+        \subsection{parte2}
+
+            Segunda parte \cite{b2}
+    
+    \section{conclusion}
+
+        final \cite{b1}\cite{b2}
+
+    \begin{thebibliography}{00}
+    \bibitem{b1} referencia1
+    \bibitem{b2} referencia2
+    \end{thebibliography}
+
+\end{document}

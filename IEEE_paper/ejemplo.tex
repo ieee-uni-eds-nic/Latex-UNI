@@ -1,0 +1,85 @@
+%Estrutura "main" para crear documento con formato IEEE, descargar junto con Lorem.tex
+
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.\def
+%\def\abstractname{Abstract}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+
+
+\usepackage[utf8]{inputenc}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+    
+    \title{Titulo}
+
+    \author
+    {
+        \IEEEauthorblockN
+        {
+            Nombre con Apellido1, Nombre con Apellido2
+        }
+        \IEEEauthorblockA
+        {
+            \textit{Facultad de Universidad Com\'un}\\
+            \textit{Universidad Com\'un}\\
+            ciudad, pais\\
+            correo1\\correo2
+        }
+    }
+
+    \maketitle
+
+    \begin{abstract}
+    resumen con mucho texto de relleno para parecer un "abstract" en espa\~nol, pero
+    ya se sabr\'a que aqu\'i va el abstract en espa\~nol.
+    \end{abstract}
+
+    \def\abstractname{abstract}
+    \begin{abstract}
+    abstract con texto repetido de arriba para parecer un "abstract" en ingles, pero
+    ya se sabr\'a que aqu\'i va el abstract en ingles.
+    \end{abstract}
+
+    \begin{IEEEkeywords}
+    palabras clave, palabras clave necesarias, agregarlas exactas
+    \end{IEEEkeywords}
+
+    \section{Introduccion}
+
+        Inicio, aqu\'i va la introducci\'on y mucho texto, este texto ser\'a agregado de otro archivo llamado \textbf{Lorem.tex}\\
+        
+        \input{Lorem.tex}
+
+    \section{desarollo}
+        \subsection{parte1}
+
+            Primera parte, aqu\'i va alg\'un texto de relleno, se volver\'a a agregar el \textit{Lorem Ipsum} \cite{b1}
+            
+            \input{Lorem.tex}
+
+        \subsection{parte2}
+
+            Segunda parte, aqu\'i va alg\'un texto de relleno, se volver\'a a agregar el \textit{Lorem Ipsum} \cite{b2}
+    
+    \section{conclusion}
+
+        final, aqu\'i va el final o la conclusi\'on de tu documento, como se puede observar se puede citar muchas veces con
+        \textbf{\textit{\textbackslash cite\{nombre de etiqueta\}}} \cite{b1}\cite{b2} , tambien se agregar\'a
+        el \textit{Lorem Ipsum}.
+        
+        \input{Lorem.tex}
+
+    \begin{thebibliography}{00}
+    \bibitem{b1} referencia1
+    \bibitem{b2} referencia2
+    \end{thebibliography}
+
+\end{document}
